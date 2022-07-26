@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Nav from "./Nav";
 import SearchArea from "./SearchArea";
+import MovieList from "./MovieList";
 
 
 class App extends Component {
@@ -39,9 +40,10 @@ class App extends Component {
     render() {
         return(
             <div>
-                {process.env.REACT_APP_API_KEY}
+                {/*{process.env.REACT_APP_API_KEY}*/}
                 <Nav/>
                 <SearchArea handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
+                <MovieList movies={this.state.movies}/>
             </div>
         )
     }
