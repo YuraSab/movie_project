@@ -12,6 +12,8 @@ const MovieList = (props) => {
                         props.movies.map((movie, i) => {
                             return(
                                 <Movie
+                                    viewMovieInfo={props.viewMovieInfo}
+                                    movieId={movie.id}
                                     key={i}
                                     image={movie.poster_path}
                                 />
